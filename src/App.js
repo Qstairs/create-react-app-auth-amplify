@@ -6,6 +6,11 @@ import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
 
+import { I18n } from 'aws-amplify';
+import { translations } from '@aws-amplify/ui';
+I18n.putVocabularies(translations);
+I18n.setLanguage('ja');
+
 class App extends Component {
   render() {
     return (
